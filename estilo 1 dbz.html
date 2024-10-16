@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+</head>
+<body style="background-color: black; font-family: 'Comic Sans MS', cursive; margin: 0; height: 100vh; position: relative;">
+
+    <!-- Formulário centralizado -->
+    <div style="width: 300px; padding: 20px; background-color: rgba(255, 255, 255, 0.1); border-radius: 10px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+        <h2 style="color: white;">Login</h2>
+        <form>
+            <label for="nome" style="color: white;">Nome:</label><br>
+            <input type="text" id="nome" name="nome" required style="margin-bottom: 10px;"><br>
+            <label for="senha" style="color: white;">Senha:</label><br>
+            <input type="password" id="senha" name="senha" required style="margin-bottom: 10px;"><br>
+            <button type="submit" style="padding: 10px 20px;">Iniciar</button>
+        </form>
+    </div>
+
+    <!-- Ícones no canto inferior esquerdo como lista -->
+    <div style="position: absolute; bottom: 10px; left: 10px;">
+        <a href="https://www.instagram.com" target="_blank" style="display: block; margin-bottom: 10px;">
+            <img src="inSTA.png" alt="Instagram" style="width: 30px;">
+        </a>
+        <a href="https://www.facebook.com" target="_blank" style="display: block; margin-bottom: 10px;">
+            <img src="facebook.png" alt="Facebook" style="width: 30px;">
+        </a>
+        <a href="https://www.google.com" target="_blank" style="display: block;">
+            <img src="google.jpg" alt="Google" style="width: 30px;">
+        </a>
+    </div>
+
+    <!-- Vídeo no canto direito alinhado ao centro com contorno branco e tamanho maior -->
+    <div style="position: absolute; top: 50%; right: 0; transform: translateY(-50%);">
+        <video autoplay loop muted style="width: 500px; border: 5px solid white; border-radius: 10px;">
+            <source src="Programador Front-end Iniciante  - APRENDA ISSO!.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo.
+        </video>
+    </div>
+
+    
+
+</body>
+</html>
