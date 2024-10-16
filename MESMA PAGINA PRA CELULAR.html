@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem Vindo Guerreiro</title>
+    <style>
+        body {
+            background-color: #000000; /* Fundo preto */
+            color: white; /* Cor do texto */
+            font-family: 'Arial', sans-serif; /* Fonte padrão */
+            padding: 20px;
+            background-image: url('fundo.jpg'); /* Imagem de fundo */
+            background-size: cover; /* Cobre toda a tela */
+            background-position: center; /* Centraliza a imagem */
+        }
+        header {
+            display: flex; /* Usar flexbox para layout */
+            justify-content: space-between; /* Espaçar elementos */
+            align-items: center; /* Alinha verticalmente */
+        }
+        h1 {
+            font-family: 'Arial Black', sans-serif; /* Estilo mais ousado */
+            text-align: center; /* Centraliza o título */
+            animation: colorChange 3s infinite; /* Efeito de troca de cor */
+            font-size: 24px; /* Tamanho do título */
+        }
+        @keyframes colorChange {
+            0% { color: #ff0000; }
+            25% { color: #ff9900; }
+            50% { color: #33cc33; }
+            75% { color: #3399ff; }
+            100% { color: #ff00ff; }
+        }
+        img {
+            width: 80px; /* Ajuste o tamanho da imagem conforme necessário */
+            height: auto;
+        }
+        .relogio {
+            text-align: right; /* Alinhamento à direita */
+            font-size: 20px; /* Aumentar tamanho do texto do cronômetro */
+        }
+        .amigos {
+            text-align: right; /* Alinhamento à direita */
+            margin-top: 20px; /* Margem para separar da barra de XP */
+            border: 2px solid red; /* Contorno vermelho */
+            padding: 10px; /* Espaçamento interno */
+            border-radius: 5px; /* Bordas arredondadas */
+        }
+        .xp-bar {
+            background: orange; 
+            width: 30%; /* Tamanho reduzido da barra de XP */
+            height: 15px; /* Altura ajustada */
+            border-radius: 5px;
+        }
+        .xp-container {
+            background: #333; /* Fundo da barra de XP */
+            width: 100%;
+            height: 15px;
+            border-radius: 5px;
+            margin-top: 5px; /* Margem para separar */
+        }
+        .login-option {
+            display: flex; /* Usar flexbox para alinhar imagem e texto */
+            align-items: center; /* Alinhar verticalmente */
+            margin: 10px 0; /* Margem entre as opções */
+            cursor: pointer; /* Cursor de ponteiro ao passar */
+        }
+        .login-option img {
+            width: 24px; /* Tamanho da imagem do login */
+            margin-right: 10px; /* Espaço entre a imagem e o texto */
+        }
+        .video-container {
+            text-align: right; /* Alinhamento à direita */
+            margin-top: 10px; /* Margem para ajustar o espaço */
+            border: 2px solid blue; /* Borda azul ao redor do vídeo */
+            padding: 5px; /* Espaçamento interno da borda */
+            border-radius: 5px; /* Bordas arredondadas */
+            width: 100%; /* Largura do vídeo */
+            max-width: 250px; /* Largura máxima do vídeo */
+            height: auto; /* Altura automática */
+            display: inline-block; /* Alinhamento ao lado do nome */
+        }
+        .video-container video {
+            width: 100%; /* Estica o vídeo para 100% da largura do contêiner */
+            height: auto; /* Mantém a proporção de altura */
+        }
+        .imagem-3d {
+            display: inline-block; /* Permite que fique ao lado do vídeo */
+            margin-left: 20px; /* Espaçamento entre o vídeo e a imagem */
+            animation: girar 4s linear infinite; /* Animação de rotação */
+        }
+        .imagem-3d img {
+            width: 80px; /* Tamanho da imagem */
+            height: auto; /* Mantém a proporção */
+        }
+        @keyframes girar {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
+        }
+        .amigo-nome {
+            font-family: 'Courier New', monospace; /* Fonte dos nomes dos amigos */
+        }
+        .amigo-img {
+            width: 40px; /* Diminuir tamanho da imagem do amigo */
+            margin-right: 10px; /* Espaço entre a imagem e o texto */
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 20px; /* Tamanho menor no celular */
+            }
+            img {
+                width: 60px; /* Imagens menores em telas pequenas */
+            }
+            .relogio {
+                font-size: 18px; /* Tamanho menor do cronômetro */
+            }
+            .xp-bar {
+                height: 10px; /* Barra de XP menor */
+            }
+        }
+    </style>
+</head>
+<body style="background-image: url(gogeta\ fundo.jpg); background-size: cover;background-color: #000000;">
+    <header>
+        <h1>Bem Vindo Guerreiro</h1>
+        <div class="relogio">Cronômetro: <span id="tempo">00:00</span></div>
+    </header>
+    
+    <main>
+        <section style="display: flex; align-items: center;">
+            <img src="icone palyer.jpg" alt="Imagem de Perfil" />
+            <h2 style="margin-left: 10px;">Guerreiro Z</h2>
+        </section>
+        
+        <!-- Vídeo à direita abaixo do cronômetro -->
+        <div class="video-container" style="float: right;">
+            <video autoplay muted loop>
+                <source src="gameplay do erik.mp4" type="video/mp4"> <!-- Substitua 'video.mp4' pelo caminho do seu vídeo -->
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+        </div>
+
+        <!-- Imagem 3D girando ao lado do vídeo -->
+        <div class="imagem-3d" style="float: right;">
+            <img src="garras.jpg" alt="Imagem 3D"> <!-- Substitua 'imagem3d.jpg' pela sua imagem -->
+        </div>
+
+        <section>
+            <p>Nível: 1</p>
+            <p>Raça: Saiyajin</p>
+        </section>
+        
+        <section>
+            <h3>Parceiros</h3>
+            <img src="turles.jpg" alt="Poder 1" />
+            <img src="broly.jpg" alt="Poder 2" />
+            <img src="goku mascarado.jpg" alt="Poder 3" />
+            <img src="black.jpg" alt="Poder 4" />
+        </section>
+        
+        <section>
+            <h3>XP: 100/500</h3>
+            <div class="xp-container">
+                <div class="xp-bar" style="width: 20%;"></div> <!-- Ajuste a porcentagem conforme necessário -->
+            </div>
+        </section>
+
+        <section class="amigos">
+            <h3>Lista de Amigos</h3>
+            <ul>
+                <li>
+                    <img src="david.jpg" alt="Amigo 1" class="amigo-img"> 
+                    <span class="amigo-nome">david</span>
+                </li>
+                <li>
+                    <img src="gabriel.jpg" alt="Amigo 2" class="amigo-img"> 
+                    <span class="amigo-nome">gabriel</span>
+                </li>
+                <li>
+                    <img src="lucas.jpg" alt="Amigo 3" class="amigo-img"> 
+                    <span class="amigo-nome">lucas</span>
+                </li>
+            </ul>
+            <button>Adicionar Amigos</button>
+        </section>
+
+        <section>
+            <h3>Login</h3>
+            <div class="login-option">
+                <img src="google.jpeg" alt="Google" />
+                <span class="login-text">Login com Google</span>
+            </div>
+            <div class="login-option">
+                <img src="facebook.jpeg" alt="Facebook" />
+                <span class="login-text">Login com Facebook</span>
+            </div>
+            <div class="login-option">
+                <img src="twitter.jpeg" alt="Twitter" />
+                <span class="login-text">Login com Twitter</span>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Dragon Ball Erik Melo Universe</p>
+    </footer>
+
+    <script>
+        // Cronômetro simples
+        let segundos = 0;
+        setInterval(() => {
+            segundos++;
+            const min = String(Math.floor(segundos / 60)).padStart(2, '0');
+            const sec = String(segundos % 60).padStart(2, '0');
+            document.getElementById('tempo').innerText = `${min}:${sec}`;
+        }, 1000);
+    </script>
+</body>
+</html>
