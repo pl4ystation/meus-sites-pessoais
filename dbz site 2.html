@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem Vindo Guerreiro</title>
+    <style>
+        body {
+            background-color: #000000; /* Fundo preto */
+            color: white; /* Cor do texto */
+            font-family: 'Arial', sans-serif; /* Fonte padrão */
+            padding: 20px;
+            background-image: url('fundo.jpg'); /* Imagem de fundo */
+            background-size: cover; /* Cobre toda a tela */
+        }
+        header {
+            display: flex; /* Usar flexbox para layout */
+            justify-content: space-between; /* Espaçar elementos */
+            align-items: center; /* Alinha verticalmente */
+        }
+        h1 {
+            font-family: 'Arial Black', sans-serif; /* Estilo mais ousado */
+            text-align: center; /* Centraliza o título */
+            animation: colorChange 3s infinite; /* Efeito de troca de cor */
+        }
+        @keyframes colorChange {
+            0% { color: #ff0000; } /* Vermelho */
+            25% { color: #ff9900; } /* Laranja */
+            50% { color: #33cc33; } /* Verde */
+            75% { color: #3399ff; } /* Azul */
+            100% { color: #ff00ff; } /* Magenta */
+        }
+        h2, h3 {
+            font-family: 'Arial Black', sans-serif; /* Estilo mais ousado */
+            text-align: left;
+        }
+        img {
+            width: 100px; /* Ajuste o tamanho da imagem conforme necessário */
+            height: auto;
+        }
+        .relogio {
+            text-align: right; /* Alinhamento à direita */
+            font-size: 24px; /* Aumentar tamanho do texto do cronômetro */
+        }
+        .amigos {
+            text-align: right; /* Alinhamento à direita */
+            margin-top: 20px; /* Margem para separar da barra de XP */
+            border: 2px solid red; /* Contorno vermelho */
+            padding: 10px; /* Espaçamento interno */
+            border-radius: 5px; /* Bordas arredondadas */
+        }
+        .xp-bar {
+            background: orange; 
+            width: 30%; /* Tamanho reduzido da barra de XP */
+            height: 15px; /* Altura ajustada */
+            border-radius: 5px;
+        }
+        .xp-container {
+            background: #333; /* Fundo da barra de XP */
+            width: 100%;
+            height: 15px;
+            border-radius: 5px;
+            margin-top: 5px; /* Margem para separar */
+        }
+        .login-option {
+            display: flex; /* Usar flexbox para alinhar imagem e texto */
+            align-items: center; /* Alinhar verticalmente */
+            margin: 10px 0; /* Margem entre as opções */
+            cursor: pointer; /* Cursor de ponteiro ao passar */
+        }
+        .login-option img {
+            width: 24px; /* Tamanho da imagem do login */
+            margin-right: 10px; /* Espaço entre a imagem e o texto */
+        }
+        .login-text {
+            color: white; /* Cor do texto */
+            font-size: 18px; /* Tamanho da fonte */
+            text-decoration: none; /* Remove sublinhado */
+        }
+        .video-container {
+            text-align: right; /* Alinhamento à direita */
+            margin-top: 10px; /* Margem menor para ajustar o espaço */
+            border: 2px solid blue; /* Borda azul ao redor do vídeo */
+            padding: 5px; /* Espaçamento interno da borda */
+            border-radius: 5px; /* Bordas arredondadas */
+        }
+        .video-container video {
+            width: 100%; /* Estica o vídeo para 100% da largura */
+            height: auto; /* Mantém a proporção de altura */
+        }
+        .amigo-nome {
+            font-family: 'Courier New', monospace; /* Fonte dos nomes dos amigos */
+        }
+        .amigo-img {
+            width: 40px; /* Diminuir tamanho da imagem do amigo */
+            margin-right: 10px; /* Espaço entre a imagem e o texto */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bem Vindo Guerreiro</h1>
+        <div class="relogio">Cronômetro: <span id="tempo">00:00</span></div>
+    </header>
+    
+    <!-- Vídeo esticado -->
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="gameplay do erik.mp4" type="video/mp4"> <!-- Substitua 'video.mp4' pelo caminho do seu vídeo -->
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+    </div>
+    
+    <main>
+        <section>
+            <img src="perfil goku black.jpg" alt="Imagem de Perfil" />
+            <h2>Guerreiro Z</h2>
+            <p>Nível: 1</p>
+            <p>Raça: Saiyajin</p>
+        </section>
+        
+        <section>
+            <h3>Poderes</h3>
+            <img src="garras.jpg" alt="Poder 1" />
+            <img src="bola de fogo.jpg" alt="Poder 2" />
+            <img src="raio verde.jpg" alt="Poder 3" />
+            <img src="espada azul.jpg" alt="Poder 4" />
+        </section>
+        
+        <section>
+            <h3>XP: 100/500</h3>
+            <div class="xp-container">
+                <div class="xp-bar" style="width: 20%;"></div> <!-- Ajuste a porcentagem conforme necessário -->
+            </div>
+        </section>
+
+        <section class="amigos">
+            <h3>Lista de Amigos</h3>
+            <ul>
+                <li>
+                    <img src="david.jpg" alt="Amigo 1" class="amigo-img"> 
+                    <span class="amigo-nome">gabriel</span>
+                </li> <!-- Imagem do Amigo 1 -->
+                <li>
+                    <img src="lucas.jpg" alt="Amigo 2" class="amigo-img"> 
+                    <span class="amigo-nome">david</span>
+                </li> <!-- Imagem do Amigo 2 -->
+                <li>
+                    <img src="gabriel.jpg" alt="Amigo 3" class="amigo-img"> 
+                    <span class="amigo-nome">lucas</span>
+                </li> <!-- Imagem do Amigo 3 -->
+            </ul>
+            <button>Adicionar Amigos</button>
+        </section>
+
+        <section>
+            <h3>Login</h3>
+            <div class="login-option">
+                <img src="google.jpeg" alt="Google" />
+                <span class="login-text">Login com Google</span>
+            </div>
+            <div class="login-option">
+                <img src="facebook.jpeg" alt="Facebook" />
+                <span class="login-text">Login com Facebook</span>
+            </div>
+            <div class="login-option">
+                <img src="twitter.jpeg" alt="Twitter" />
+                <span class="login-text">Login com Twitter</span>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Dragon Ball Universe</p>
+    </footer>
+
+    <script>
+        // Cronômetro simples
+        let tempo = 0;
+        setInterval(() => {
+            tempo++;
+            const minutos = Math.floor(tempo / 60);
+            const segundos = tempo % 60;
+            document.getElementById('tempo').textContent = 
+                (minutos < 10 ? '0' : '') + minutos + ':' + 
+                (segundos < 10 ? '0' : '') + segundos;
+        }, 1000);
+    </script>
+</body>
+</html>

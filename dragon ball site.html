@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem Vindo Guerreiro</title>
+    <style>
+        body {
+            background: linear-gradient(to left, #ff6600, #000000); /* Gradiente laranja para preto */
+            color: white; /* Cor do texto */
+            font-family: 'Arial', sans-serif; /* Fonte padrão, você pode trocar pela fonte do Dragon Ball depois */
+        }
+        h1, h2, h3 {
+            font-family: 'Arial Black', sans-serif; /* Estilo mais ousado */
+            text-align: left;
+        }
+        img {
+            width: 100px; /* Ajuste o tamanho da imagem conforme necessário */
+            height: auto;
+        }
+        button {
+            background: #ffcc00; /* Botão amarelo */
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #ffc107; /* Efeito ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bem Vindo Guerreiro</h1>
+        <div id="relogio">Cronômetro: <span id="tempo">00:00</span></div>
+    </header>
+    <main>
+        <section>
+            <img src="perfil goku black.jpg" alt="Imagem de Perfil" />
+            <h2>Guerreiro Z</h2>
+            <p>Nível: 1</p>
+            <p>Raça: Saiyajin</p>
+        </section>
+        
+        <section>
+            <h3>Poderes</h3>
+            <img src="poder1.jpg" alt="Poder 1" />
+            <img src="poder2.jpg" alt="Poder 2" />
+            <img src="poder3.jpg" alt="Poder 3" />
+            <img src="poder4.jpg" alt="Poder 4" />
+        </section>
+        
+        <section>
+            <h3>XP: 100/500</h3>
+            <div style="background: orange; width: 100%; height: 20px; border-radius: 5px;">
+                <div style="background: green; width: 20%; height: 100%; border-radius: 5px;"></div>
+            </div>
+        </section>
+
+        <section>
+            <h3>Lista de Amigos</h3>
+            <ul>
+                <li>Amigo 1</li>
+                <li>Amigo 2</li>
+                <li>Amigo 3</li>
+            </ul>
+            <button>Adicionar Amigos</button>
+        </section>
+
+        <section>
+            <h3>Login</h3>
+            <button>Login com Google</button>
+            <button>Login com Facebook</button>
+            <button>Login com Twitter</button>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Dragon Ball Universe</p>
+    </footer>
+
+    <script>
+        // Cronômetro simples
+        let tempo = 0;
+        setInterval(() => {
+            tempo++;
+            const minutos = Math.floor(tempo / 60);
+            const segundos = tempo % 60;
+            document.getElementById('tempo').textContent = 
+                (minutos < 10 ? '0' : '') + minutos + ':' + 
+                (segundos < 10 ? '0' : '') + segundos;
+        }, 1000);
+    </script>
+</body>
+</html>
